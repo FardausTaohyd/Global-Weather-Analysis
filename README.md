@@ -11,6 +11,7 @@ Project dataset link: https://www.kaggle.com/datasets/nelgiriyewithana/global-we
 The project is structured as a Google Colab notebook, containing the following sections:
 
 1.  **Setup and Data Loading:** Imports necessary libraries and loads the dataset.
+
 2.  **Exploratory Data Analysis (EDA):** Visualizations and analysis to understand the data distribution, relationships between features, and initial insights into weather patterns. This includes:
     *   Pairplots of selected features.
     *   Correlation heatmap of numerical variables.
@@ -18,7 +19,9 @@ The project is structured as a Google Colab notebook, containing the following s
     *   Sunrise and sunset hour distribution.
     *   Moon phases distribution pie chart.
     *   Scatter plot of weather conditions over time.
+    
 3.  **Data Preprocessing:** Steps to prepare the data for machine learning models, including handling missing values, encoding categorical features, and splitting data into training and testing sets.
+
 4.  **Model Application and Evaluation:** Implementation and evaluation of various machine learning models for weather condition prediction. The models include:
     *   Logistic Regression
     *   Decision Tree Classifier
@@ -29,12 +32,14 @@ The project is structured as a Google Colab notebook, containing the following s
     *   Neural Network (Multi-layer Perceptron)
     *   Linear Regression (for continuous target)
     *   K-Means Clustering (for identifying weather clusters)
+    
 5.  **Results and Visualization:** Presentation of model performance metrics (accuracy, confusion matrix, classification report, R² score, Silhouette score) and visualizations to interpret results, including:
     *   Model comparison bar chart.
     *   Confusion matrix heatmap.
     *   Feature importance in Random Forest.
     *   K-Means cluster visualization using PCA.
     *   Cluster center values bar plot.
+    
 6.  **Comparison with Other Models:** A table comparing the performance and limitations of different models, including those from external sources.
 
 ## Libraries Used
@@ -50,7 +55,12 @@ The project is structured as a Google Colab notebook, containing the following s
 3.  Run each code cell sequentially.
 
 ## Key Findings
-*   [Summarize some of your key findings from the EDA and model evaluation sections. For example: "Random Forest performed best among the classification models with an accuracy of X%," "Temperature distribution shows a peak around Y°C," "Certain features like cloud cover and humidity were identified as highly important for predicting weather conditions."]
+*   [Random Forest performed best among the classification models with an accuracy of approximately 90%.
+The temperature distribution shows a peak around 20-30°C.
+Sunrise times are mostly concentrated between 5-7 AM, and sunset times between 6-8 PM.
+The most frequent moon phases are Waxing Crescent and Waning Crescent.
+Features like cloud cover and humidity show high importance in the Random Forest model.
+K-Means clustering with k=3 reveals distinct weather patterns based on the selected features.]
 
 ## Model Performance Summary
 | Model               | Metric            | Score   |
@@ -68,14 +78,17 @@ The project is structured as a Google Colab notebook, containing the following s
 *(Note: The metrics and scores for Linear Regression and K-Means Clustering are different from classification models and are reported accordingly.)*
 
 ## Limitations
-*   [Mention any limitations of your analysis or models. For example: "The dataset represents a snapshot in time and may not capture long-term climate trends," "Some weather conditions have limited data points, affecting model performance for those classes," "The interpretability of some models (e.g., Neural Network) is limited."]
+*   [The dataset provides a snapshot of weather data and may not capture long-term climate trends or seasonal variations comprehensively.
+Some weather conditions have very few data points, which can affect the performance of classification models for those specific classes.
+The multi-class classification problem with a large number of classes (41 unique conditions) makes it challenging for some models to achieve high accuracy across all classes, as seen in the confusion matrices and classification reports.
+The low Silhouette Score for K-Means clustering suggests that the clusters are not well-separated based on the features used.]
 
 ## Future Work
-*   [Suggest potential areas for future exploration or improvement. For example: "Include time-series analysis to study weather changes over time," "Experiment with more advanced deep learning models for weather forecasting," "Incorporate additional weather-related datasets."]
-
-## License
-[Specify the license for your project, e.g., MIT, Apache 2.0]
+*   [Perform time-series analysis to investigate how weather patterns change over longer periods.
+Explore more advanced deep learning models (e.g., LSTMs) for weather forecasting, especially for sequential data.
+Incorporate additional data sources, such as historical weather data, to build more robust models.
+Address the class imbalance issue for less frequent weather conditions to improve model performance on those classes.
+Further investigate the optimal number of clusters for K-Means or explore other clustering algorithms.]
 
 ## Contact
-[Fardaus Taohyd/github.com/FardausTaohyd]
-[Your Email Address (Optional)]
+fardaustaohyd31@gmail.com
